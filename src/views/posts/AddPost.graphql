@@ -1,0 +1,5 @@
+mutation AddPostM($input: AddPostInput!) {
+  addPost(input: $input) {
+    id
+  }
+}
