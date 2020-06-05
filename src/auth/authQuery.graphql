@@ -1,0 +1,6 @@
+query AuthQ {
+  me {
+    id
+    name
+  }
+}

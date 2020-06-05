@@ -1,0 +1,9 @@
+mutation UploadM($input: Upload!) {
+  fileUpload(file: $input) {
+    id
+    fileName
+    url
+    contentLength
+    uploadedAt
+  }
+}

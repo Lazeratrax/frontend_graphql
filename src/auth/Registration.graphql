@@ -1,0 +1,5 @@
+mutation RegistrationM($input: RegistrationInput!) {
+  registration(input: $input) {
+    access_token
+  }
+}

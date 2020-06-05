@@ -1,0 +1,7 @@
+query PostsQ($id: Int!) {
+  posts(id: $id) {
+    id
+    title
+    description
+  }
+}
