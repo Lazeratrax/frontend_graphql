@@ -1,0 +1,7 @@
+query ProfileQ {
+  me {
+    id
+    name
+    email
+  }
+}

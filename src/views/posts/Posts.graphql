@@ -1,0 +1,12 @@
+query PostsQ($input: PostsInput!) {
+  posts(input: $input) {
+    data {
+      id
+      title
+      description
+    }
+    page
+    perPage
+    total
+  }
+}

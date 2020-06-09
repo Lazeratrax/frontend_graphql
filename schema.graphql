@@ -1,0 +1,63 @@
+type AccessToken {
+  access_token: String!
+}
+type User {
+  id: ID!
+  name: String
+  email: String!
+}
+input SignUpInput {
+  email: String!
+  password: String!
+  name: String
+}
+input LogInInput {
+  email: String!
+  password: String!
+}
+input EditUserInput {
+  id: ID!
+  email: String!
+  password: String!
+}
+
+type Post {
+  id: ID!
+  title: String!
+  description: String!
+  authorId: ID!
+}
+type Posts {
+  data: [Post!]!
+  page: Int!
+  perPage: Int!
+  total: Int!
+}
+input PostsInput {
+  query: String!
+  page: Int!
+}
+input AddPostInput {
+  title: String!
+  description: String!
+  authorId: ID!
+}
+input EditPostInput {
+  id: ID!
+  title: String!
+  description: String!
+}
+
+type Mutation {
+  signUp(input: SignUpInput!): AccessToken!
+  logIn(input: LogInInput!): AccessToken!
+  addPost(input: AddPostInput!): Post!
+  editPost(input: EditPostInput!): Post!
+  deletePost(id: ID!): Boolean!
+}
+
+type Query {
+  me: User!
+  posts(input: PostsInput!): Posts!
+  post(id: ID!): Post!
+}

@@ -1,0 +1,7 @@
+query PostQ($id: ID!) {
+  post(id: $id) {
+    id
+    title
+    description
+  }
+}
